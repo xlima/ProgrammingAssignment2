@@ -75,7 +75,7 @@ cacheSolve <- function(x, ...) {
 # In order to check the result, we can make:
 # solve(matrix)
 # If we obtain the same result as with cacheSolve(a), then the functions work!
-# If we repeat cacheSolve(a) once again, it should display the message "getting cached data".
+# If we type cacheSolve(a) once again, it should display the message "getting cached data".
 
 
 
