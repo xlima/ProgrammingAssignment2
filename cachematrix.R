@@ -1,20 +1,19 @@
-## Put comments here that give an overall description of what your
-## functions do:
-## As matrix inversion is usually a costly computation, with these
+## Matrix Inversion Script - Programming Assignment 2
+## for the R programming course at COURSERA
+
+## As matrix inversion is usually a costly computation, with the following
 ## functions one can save time by retreaving an inverted matrix
 ## previously computed and stored on the cache.
 ## If the inverted matrix was not previously computed, these
 ## functions will compute it and store it on cache for further use.
 
-## Write a short comment describing this function
-## This function creates a matrix and can store its inverse on the cache.
 
+## The makeCacheMatrix is a function that creates a matrix and can store its inverse on the cache.
 makeCacheMatrix <- function(x = matrix()) {
-
+        
 }
 
 
-## Write a short comment describing this function:
 ## The cacheSolve function takes the matrix produced by the previous function,
 ## makeCacheMatrix, and computes the inverse of it.
 ## In case an inverse is already stored on the cache, and no changes
@@ -23,4 +22,5 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
+        
 }
