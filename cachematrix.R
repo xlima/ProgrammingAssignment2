@@ -9,6 +9,7 @@
 
 
 ## The makeCacheMatrix is a function that creates a matrix and can store its inverse on the cache.
+## It assumes that the supplied matrix is always invertible!
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
         # set is a function that changes the matrix stored in the main function.
