@@ -48,7 +48,21 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
-        
+        # The first thing cacheSolve does is to verify if the value m, stored previously with getsolve, exists and is not NULL.
+        m <- x$getsolve()
+        # If it exists in memory, it simply returns a message and the value m, that is supposed to be the inverse of the matrix
+        if(!is.null(m)) {
+                message("getting cached data")
+                return(m)
+        }
+        # everything that follows this if() is a sort of else {}. 
+        # data gets the vector stored with makeCacheMatrix, 
+        data <- x$get()
+        # m calculates the inverse of the matrix 
+        m <- solve(data, ...)
+        # x$setsolve(m) stores it in the object generated assigned with makeCacheMatrix
+        x$setsolve(m)
+        m
 }
 
 
@@ -57,4 +71,10 @@ cacheSolve <- function(x, ...) {
 # matrix <- matrix(10,2,2)
 # a <- makeCacheMatrix(matrix)
 # cacheSolve(a)
-# > 2
+
+# In order to check the result, we can make:
+# solve(matrix)
+# If we obtain the same result as with cacheSolve(a), then the functions work!
+
+
+
