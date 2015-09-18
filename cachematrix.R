@@ -50,3 +50,11 @@ cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         
 }
+
+
+# The input of cacheSolve is the object where makeCacheMatrix is stored. 
+# Example, for a matrix of 10s, on 2 rows and 2 columns:
+# matrix <- matrix(10,2,2)
+# a <- makeCacheMatrix(matrix)
+# cacheSolve(a)
+# > 2
