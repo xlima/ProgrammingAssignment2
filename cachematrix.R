@@ -10,7 +10,33 @@
 
 ## The makeCacheMatrix is a function that creates a matrix and can store its inverse on the cache.
 makeCacheMatrix <- function(x = matrix()) {
+        m <- NULL
+        # set is a function that changes the matrix stored in the main function.
+        set <- function(y) {
+                #  "x <<- y" substitutes the matrix x with y (the input) in the main function (makeCacheMatrix). 
+                # If it was "x <- y" it would have substitute the vector x with y only in the set function. 
+                x <<- y
+                # "m <<- NULL" restores to null the value of the inverse of the matrix m, 
+                # because the old inverse of the old matrix is not needed anymore. 
+                # The new inverted matrix needs to be recalculated through the function cacheSolve.
+                m <<- NULL
+        }
+        # get is a function that returns the inverted matrix x stored in the main function. Doesn't require any input.
+        get <- function() x
         
+        # setsolve and getsolve are functions very similar to set and get. 
+        # They don't calculate the inverse, they simply 
+        # store the value of the input in a variable m into the main function makeCacheMatrix (setsolve) 
+        # and return it (getsolve).
+        # The input of setsolve, is supposed to be the inverse of the matrix x
+        setsolve <- function(solve) m <<- solve
+        getsolve <- function() m
+        
+        #  To store the 4 functions in the function makeCacheMatrix, we need the function list(), 
+        # so that when we assign makeCacheMatrix to an object, the object has all the 4 functions.
+        list(set = set, get = get,
+             setsolve = setsolve,
+             getsolve = getsolve)
 }
 
 
