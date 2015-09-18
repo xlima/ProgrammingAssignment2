@@ -41,6 +41,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
+
 ## The cacheSolve function takes the matrix produced by the previous function,
 ## makeCacheMatrix, and computes the inverse of it.
 ## In case an inverse is already stored on the cache, and no changes
@@ -68,13 +69,17 @@ cacheSolve <- function(x, ...) {
 
 
 # The input of cacheSolve is the object where makeCacheMatrix is stored. 
-# Example, for a matrix of 10s, on 2 rows and 2 columns:
+# Example of usage for a matrix with the numbers c(10,15,25,40), on 2 rows and 2 columns,
+# created with
 # matrix <- matrix(c(10,15,25,40),2,2)
+# Use the following commands to compute and store the inverse of the matrix:
 # a <- makeCacheMatrix(matrix)
 # cacheSolve(a)
 
+
 # In order to check the result, we can make:
 # solve(matrix)
+
 # If we obtain the same result as with cacheSolve(a), then the functions work!
 # If we type cacheSolve(a) once again, it should display the message "getting cached data".
 
