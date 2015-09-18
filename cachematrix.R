@@ -68,13 +68,14 @@ cacheSolve <- function(x, ...) {
 
 # The input of cacheSolve is the object where makeCacheMatrix is stored. 
 # Example, for a matrix of 10s, on 2 rows and 2 columns:
-# matrix <- matrix(10,2,2)
+# matrix <- matrix(c(10,15,25,40),2,2)
 # a <- makeCacheMatrix(matrix)
 # cacheSolve(a)
 
 # In order to check the result, we can make:
 # solve(matrix)
 # If we obtain the same result as with cacheSolve(a), then the functions work!
+# If we repeat cacheSolve(a) once again, it should display the message "getting cached data".
 
 
 
