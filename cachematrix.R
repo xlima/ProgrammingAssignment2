@@ -1,5 +1,5 @@
 ## Matrix Inversion Script - Programming Assignment 2
-## for the R programming course at COURSERA
+## for the R programming course at COURSERA.
 
 ## As matrix inversion is usually a costly computation, with the following
 ## functions one can save time by retreaving an inverted matrix
